@@ -3,11 +3,788 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design System - Дизайн интерьера в Алматы</title>
+    <title>San studio - Дизайн интерьера в Алматы</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <p>Бла бла бла текст юхууу</p>
+
+    <header class="hero">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="images/logo_san_studio/logo_baha_red.svg" alt="san studio">
+            </a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#about">О НАС</a></li>
+                <li><a href="#process">ПРОЦЕСС</a></li>
+                <li><a href="#portfolio">ПОРТФОЛИО</a></li>
+                <li><a href="#pricing">УСЛУГИ</a></li>
+                <li><a href="#cta">КОНСУЛЬТАЦИЯ</a></li>
+                <li><a href="https://wa.me/77052161068" target="_blank">WHATSAPP</a></li>
+            </ul>
+
+            <a href="tel:+77052161068" class="nav__phone">+7 (705) 216 10 68</a>
+
+            <button class="nav__burger" id="navBurger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <div id="navSpacer"></div>
+
+        <div class="hero__title-group">
+            <h1 class="hero__title">ДИЗАЙН ИНТЕРЬЕРА В&nbsp;АЛМАТЫ</h1>
+            <p class="hero__subtitle">УСТОЙЧИВЫЙ ПУТЬ ВАШЕГО БУДУЩЕГО</p>
+        </div>
+
+        <div class="hero__button-group">
+            <p class="hero__button-text">Ответьте на 6 простых вопросов для рассчета стоимости</p>
+            <button class="hero__button" data-open-quiz>РАССЧИТАТЬ СТОИМОСТЬ</button>
+        </div>
+    </header>
+
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="approach__intro">
+                <span class="approach__label">
+                    НАШ ПОДХОД — ЭТО БАЛАНС МЕЖДУ ЭЛЕМЕНТАМИ
+                    <span class="approach__line"></span>
+                </span>
+                <h2 class="approach__title">
+                    ДИЗАЙН ВАШЕЙ<br>
+                    <span class="approach__title-accent">МЕЧТЫ</span>
+                </h2>
+            </div>
+
+            <div class="approach__cards">
+                <div class="approach__card">
+                    <img src="/images/section__approach/approach_card_1.svg" alt="" class="approach__icon">
+                    <h3 class="approach__card-title">ФУНКЦИЯ</h3>
+                    <p class="approach__card-text">
+                        Мы направляем смысл. Каждая деталь вносит свой вклад для достижения результата.
+                        Для нас не существует незначительных деталей — пространство должно быть не только
+                        эстетичным, но и удобным в реальной жизни.
+                    </p>
+                </div>
+
+                <div class="approach__card">
+                    <img src="/images/section__approach/approach_card_2.svg" alt="" class="approach__icon">
+                    <h3 class="approach__card-title">НАДЕЖНОСТЬ</h3>
+                    <p class="approach__card-text">
+                        Каждая деталь интерьера прослужит Вам долгие годы. Чтобы интерьер оставался
+                        неустаревающим — материалы, технологии и подход должны соответствовать задумке.
+                        Мы проектируем решения, которые сохраняют актуальность и качество спустя годы.
+                    </p>
+                </div>
+
+                <div class="approach__card">
+                    <img src="/images/section__approach/approach_card_3.svg" alt="" class="approach__icon">
+                    <h3 class="approach__card-title">КРАСОТА</h3>
+                    <p class="approach__card-text">
+                        Эстетика пространства. Мы создаем образ из ансамбля чувств и гармонии окружения.
+                        Композиция форм, сочетание цвета, пропорция элементов, динамика линий, фактура
+                        материалов и многое другое — учитываем это всё.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__inner">
+
+                <div class="about__left">
+                    <div class="about__label">
+                        <span class="about__label-small">О СТУДИИ</span>
+                        <span class="about__label-bold">SAN STUDIO</span>
+                    </div>
+
+                    <h2 class="about__title">
+                        Мы создаём интерьеры <em>с 2018 года</em>
+                    </h2>
+
+                    <div class="about__stat">
+                        <span class="about__stat-number">7+</span>
+                        <span class="about__stat-label">ЛЕТ ПРАКТИКИ</span>
+                    </div>
+                </div>
+
+                <div class="about__right">
+                    <p class="about__text">
+                        Мы — команда дизайнеров, архитекторов и специалистов по реализации,
+                        объединённых любовью к современному интерьеру и вниманием к деталям.
+                    </p>
+                    <p class="about__text">
+                        За годы работы мы сформировали подход, в котором эстетика сочетается с
+                        инженерной логикой, а визуальная идея доводится до точной реализации.
+                        Каждый член команды имеет профильное высшее образование и практический
+                        опыт работы с жилыми и коммерческими пространствами.
+                    </p>
+
+                    <div class="about__values">
+                        <span class="about__values-label">МЫ ЦЕНИМ</span>
+
+                        <div class="about__values-grid">
+                            <ul class="about__values-col">
+                                <li>Честный диалог</li>
+                                <li>Качество реализации</li>
+                            </ul>
+                            <ul class="about__values-col">
+                                <li>Продуманный дизайн</li>
+                                <li>Пространство вне времени</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="container">
+            <div class="process__intro">
+                <span class="process__label">ПУТЬ ДЛИНОЮ В ЖИЗНЬ</span>
+                <h2 class="process__title">
+                    Прозрачный процесс<br>
+                    от идеи <em>до реализации</em>
+                </h2>
+            </div>
+
+            <div class="process__grid">
+
+                <div class="process__step">
+                    <span class="process__number">01</span>
+                    <h3 class="process__step-title">Знакомство и анализ</h3>
+                    <p class="process__step-text">
+                        Обсуждаем ваш образ жизни, задачи, эстетику и ожидания от будущего пространства.
+                        Помогаем выбрать оптимальный пакет услуг и фиксируем в индивидуальном договоре все
+                        условия: ТЗ, сроки, стоимость и порядок расчетов.
+                    </p>
+                </div>
+
+                <div class="process__step">
+                    <span class="process__number">02</span>
+                    <h3 class="process__step-title">Планировочные решения</h3>
+                    <p class="process__step-text">
+                        Мы делаем детальный обмер помещения с дополнительными фото и видеофиксацией, не
+                        упуская деталей. Переводим ваши пожелания в грамотное планировочное решение.
+                        Создаём функциональную основу проекта, продумываем сценарии жизни и эргономику.
+                    </p>
+                </div>
+
+                <div class="process__step">
+                    <span class="process__number">03</span>
+                    <h3 class="process__step-title">Концепция и визуализация</h3>
+                    <p class="process__step-text">
+                        Согласно планировке детально прорабатываем концепцию: свет, формы, материалы и общую
+                        атмосферу пространства. Результатом становится фотореалистичная 3D-визуализация —
+                        вы сможете совершить виртуальную прогулку по своему будущему дому.
+                    </p>
+                </div>
+
+                <div class="process__step">
+                    <span class="process__number">04</span>
+                    <h3 class="process__step-title">Рабочая документация</h3>
+                    <p class="process__step-text">
+                        Готовим полный комплект чертежей и спецификаций для точной реализации проекта.
+                        Именно эта техническая документация гарантирует, что строители реализуют интерьер
+                        безупречно.
+                    </p>
+                </div>
+
+                <div class="process__step">
+                    <span class="process__number">05</span>
+                    <h3 class="process__step-title">Комплектация и реализация</h3>
+                    <p class="process__step-text">
+                        Подбираем материалы, мебель и оборудование, взаимодействуем с подрядчиками.
+                    </p>
+                </div>
+
+                <div class="process__step">
+                    <span class="process__number">06</span>
+                    <h3 class="process__step-title">Авторский надзор</h3>
+                    <p class="process__step-text">
+                        Следим за соответствием реализации утверждённому проекту и сопровождаем объект.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio__intro">
+                <span class="portfolio__label">НАШИ ПРОЕКТЫ</span>
+                <h2 class="portfolio__title"> <span>ПОРТФОЛИО </span> <br class="mobile-break"> SAN STUDIO</h2>
+            </div>
+
+            <div class="portfolio__grid" id="portfolioGrid">
+                <button type="button" class="portfolio__item" data-project="project-01" style="background-image: url('images/portfolio/project-01.jpg');">
+                    <span class="portfolio__item-title">Название проекта 1</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-02" style="background-image: url('images/portfolio/project-02.jpg');">
+                    <span class="portfolio__item-title">Название проекта 2</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-03" style="background-image: url('images/portfolio/project-01.jpg');">
+                    <span class="portfolio__item-title">Название проекта 3</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-04" style="background-image: url('images/portfolio/project-02.jpg');">
+                    <span class="portfolio__item-title">Название проекта 4</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-05" style="background-image: url('images/portfolio/project-01.jpg');">
+                    <span class="portfolio__item-title">Название проекта 5</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-06" style="background-image: url('images/portfolio/project-02.jpg');">
+                    <span class="portfolio__item-title">Название проекта 6</span>
+                </button>
+                <button type="button" class="portfolio__item" data-project="project-07" style="background-image: url('images/portfolio/project-01.jpg');">
+                    <span class="portfolio__item-title">Название проекта 7</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-08" style="background-image: url('images/portfolio/project-02.jpg');">
+                    <span class="portfolio__item-title">Название проекта 8</span>
+                </button>
+
+                <button type="button" class="portfolio__item" data-project="project-09" style="background-image: url('images/portfolio/project-01.jpg');">
+                    <span class="portfolio__item-title">Название проекта 9</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="cta__inner">
+                <div class="cta__top">
+                    <div class="cta__left">
+                        <span class="cta__label">МЫ ПОНИМАЕМ, КАК ЭТО СЛОЖНО — НАЧАТЬ МАСШТАБНЫЙ ПРОЕКТ, ПОЭТОМУ</span>
+                        <h2 class="cta__title">Будем рады ответить на любые ваши вопросы</h2>
+                    </div>
+
+                    <a href="#contacts" class="cta__button">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+                </div>
+
+                <span class="cta__line"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее фото">&lsaquo;</button>
+        <div class="lightbox__stage">
+            <img class="lightbox__image" id="lightboxImage" src="" alt="">
+            <span class="lightbox__counter" id="lightboxCounter"></span>
+        </div>
+        <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее фото">&rsaquo;</button>
+    </div>
+
+    <!-- Модалка формы "Получить консультацию" -->
+    <div class="modal" id="consultModal" aria-hidden="true">
+        <div class="modal__overlay" id="modalOverlay"></div>
+
+        <div class="modal__dialog">
+            <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть">&times;</button>
+
+            <form class="modal__form" id="consultForm">
+                <div class="modal__field">
+                    <label for="objectType">Тип объекта</label>
+                    <select id="objectType" name="objectType" required>
+                        <option value="" disabled selected>Выбрать</option>
+                        <option value="apartment">Квартира</option>
+                        <option value="house">Дом</option>
+                        <option value="office">Офис / коммерция</option>
+                    </select>
+                </div>
+
+                <div class="modal__field">
+                    <label for="area">Площадь, м2</label>
+                    <input type="number" id="area" name="area" min="0" inputmode="numeric">
+                </div>
+
+                <div class="modal__field">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                </div>
+
+                <div class="modal__field">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7" required>
+                </div>
+
+                <label class="modal__checkbox">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <span>Я соглашаюсь с <a href="https://adilet.zan.kz/rus/docs/Z1300000094" target="_blank">Политикой конфиденциальности</a></span>
+                </label>
+
+                <button type="submit" class="modal__submit">ОТПРАВИТЬ</button>
+            </form>
+
+            <div class="modal__success" id="modalSuccess">
+                <span class="modal__success-icon">&#10003;</span>
+                <p class="modal__success-title">Заявка отправлена</p>
+                <p class="modal__success-text">Мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка "Оставьте заявку" — открывается по клику на кнопки "ЗАКАЗАТЬ" в пакетах услуг -->
+    <div class="modal" id="orderModal" aria-hidden="true">
+        <div class="modal__overlay" id="orderModalOverlay"></div>
+
+        <div class="modal__dialog">
+            <button type="button" class="modal__close" id="orderModalClose" aria-label="Закрыть">&times;</button>
+
+            <div class="quiz-final" id="orderFinalBlock">
+                <h3 class="quiz-final__title">Оставьте заявку</h3>
+                <p class="quiz-final__subtitle">Мы свяжемся с вами и обсудим детали выбранного пакета</p>
+
+                <form class="quiz-final__fields" id="orderForm">
+                    <div class="quiz-field">
+                        <label>Введите имя</label>
+                        <input type="text" name="order_name" placeholder="Арман" required>
+                    </div>
+                    <div class="quiz-field">
+                        <label>Введите телефон</label>
+                        <input type="tel" name="order_phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <button type="submit" class="quiz-btn quiz-btn--submit">Отправить заявку</button>
+
+                    <label class="quiz-checkbox">
+                        <input type="checkbox" name="order_privacy_agree" required checked>
+                        <span class="quiz-checkbox__text">
+                            Я соглашаюсь на <a href="https://adilet.zan.kz/rus/docs/Z1300000094" target="_blank">обработку персональных данных</a> согласно политике конфиденциальности
+                        </span>
+                    </label>
+                </form>
+            </div>
+
+            <div class="modal__success" id="orderModalSuccess">
+                <span class="modal__success-icon">&#10003;</span>
+                <p class="modal__success-title">Заявка отправлена</p>
+                <p class="modal__success-text">Мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section class="configuration">
+        <div class="container">
+            <span class="configuration__label">ЗНАНИЕ РЫНКА</span>
+            <h2 class="configuration__title">КОМПЛЕКТАЦИЯ ОБЪЕКТОВ</h2>
+        </div>
+    </section> -->
+
+    <section class="weknowbrands">
+        <span class="weknowbrands__text">Знаем лично, более 100 брендов и имеем дизайнерские скидки до 20%</span>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <div class="partners__grid">
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__derufa.svg" alt="DERUFA" draggable="false">
+                </div>
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__eglo.svg" alt="EGLO" draggable="false">
+                </div>
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__europlast.svg" alt="Европласт" draggable="false">
+                </div>
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__finn_floor.svg" alt="Finnfloor" draggable="false">
+                </div>
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__gessi.svg" alt="Gessi" draggable="false">
+                </div>
+
+                <div class="partners__item">
+                    <img src="images/brands__section/brands__hansgrohe.svg" alt="Hansgrohe" draggable="false">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing__intro">
+                <h2 class="pricing__title">ПАКЕТЫ УСЛУГ</h2>
+                <p class="pricing__subtitle">ОТ ИДЕИ ПЛАНИРОВОЧНОГО РЕШЕНИЯ ДО&nbsp;РЕАЛИЗАЦИИ ПОД КЛЮЧ</p>
+            </div>
+
+            <div class="pricing__grid">
+
+                <div class="pricing__card">
+                    <h3 class="pricing__card-title">START</h3>
+                    <span class="pricing__line"></span>
+                    <ul class="pricing__features">
+                        <li>Обмер фотофиксация</li>
+                        <li>План монтажа демонтажа</li>
+                        <li>План расстановки мебели</li>
+                        <li>План привязки розеток</li>
+                        <li>План привязки сан.техники</li>
+                        <li class="is-disabled">3D Визуализация</li>
+                    </ul>
+                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                </div>
+
+                <div class="pricing__card">
+                    <h3 class="pricing__card-title">REGULAR</h3>
+                    <span class="pricing__line"></span>
+                    <ul class="pricing__features">
+                        <li>Обмер фотофиксация</li>
+                        <li>Планировочное решение</li>
+                        <li>Стилевые коллажи</li>
+                        <li>Альбом чертежей</li>
+                        <li class="is-disabled">3D Визуализация</li>
+                        <li class="is-disabled">Авторский надзор</li>
+                        <li class="is-disabled">Комплектация</li>
+                    </ul>
+                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                </div>
+
+                <div class="pricing__card">
+                    <h3 class="pricing__card-title">COMFORT</h3>
+                    <span class="pricing__line"></span>
+                    <ul class="pricing__features">
+                        <li>Обмер фотофиксация</li>
+                        <li>Планировочное решение</li>
+                        <li>Стилевые коллажи</li>
+                        <li>Альбом чертежей</li>
+                        <li>3D Визуализация</li>
+                        <li class="is-disabled">Авторский надзор</li>
+                        <li class="is-disabled">Комплектация</li>
+                    </ul>
+                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                </div>
+
+                <div class="pricing__card">
+                    <h3 class="pricing__card-title">BUSINESS</h3>
+                    <span class="pricing__line"></span>
+                    <ul class="pricing__features">
+                        <li>Обмер фотофиксация</li>
+                        <li>Планировочное решение</li>
+                        <li>Стилевые коллажи</li>
+                        <li>Альбом чертежей</li>
+                        <li>3D Визуализация</li>
+                        <li>Авторский надзор</li>
+                        <li>Комплектация</li>
+                    </ul>
+                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                
+                <!-- Колонка 1: О студии SAN STUDIO -->
+                <div class="footer__col footer__col--about">
+                    <h3 class="footer__title">SAN STUDIO</h3>
+                    <p class="footer__text">
+                        Разрабатываем уникальные и продуманные дизайн-проекты интерьеров. Качественная 3D-визуализация, чертежи и авторское сопровождение реализации вашего пространства.
+                    </p>
+                    
+                    <!-- Мессенджер (только WhatsApp) -->
+                    <div class="footer__socials">
+                        <a href="https://wa.me/77784297799" aria-label="WhatsApp" target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.011 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.486 1.332 5.004L2 22l5.129-1.341c1.464.797 3.119 1.218 4.88 1.219h.004c5.507 0 9.99-4.479 9.99-9.985 0-2.667-1.038-5.176-2.924-7.062A9.923 9.923 0 0 0 12.011 2zm0 18.281h-.003c-1.5 0-2.971-.403-4.253-1.164l-.305-.181-3.161.828.843-3.083-.198-.315a8.307 8.307 0 0 1-1.272-4.382c0-4.577 3.725-8.301 8.303-8.301 2.217 0 4.302.863 5.87 2.431a8.256 8.256 0 0 1 2.428 5.871c0 4.578-3.725 8.303-8.254 8.303zm4.544-6.212c-.249-.125-1.472-.727-1.7-.81-.228-.083-.394-.125-.56.125-.166.249-.643.81-.788.976-.145.166-.29.187-.539.062-.249-.125-1.053-.388-2.006-1.238-.742-.662-1.243-1.48-1.388-1.729-.145-.249-.015-.384.109-.508.112-.112.249-.29.373-.435.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.435-.062-.125-.56-1.349-.768-1.847-.203-.487-.41-.421-.56-.428l-.478-.009c-.166 0-.435.062-.663.311-.228.249-.871.851-.871 2.076 0 1.225.892 2.408 1.016 2.573.125.166 1.756 2.681 4.254 3.76.595.257 1.06.41 1.423.525.598.19 1.142.163 1.572.099.48-.071 1.472-.602 1.68-1.183.208-.581.208-1.079.145-1.183-.063-.104-.229-.187-.478-.312z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Контакты -->
+                <div class="footer__col footer__col--contacts">
+                    <h3 class="footer__title">КОНТАКТЫ</h3>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:info@sanstudio.kz">info@sanstudio.kz</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+77052161068">+7 (705) 216-10-68</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>г. Алматы</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Навигация -->
+                <div class="footer__col footer__col--nav">
+                    <h3 class="footer__title">НАВИГАЦИЯ</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#approach">Наш подход</a></li>
+                        <li><a href="#about">О студии</a></li>
+                        <li><a href="#process">Процесс</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#pricing">Пакеты услуг</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Нижняя плашка -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    2026 © SAN STUDIO. Студия дизайна интерьера. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно квиза -->
+    <div class="quiz-modal" id="quizModal" aria-hidden="true">
+        <div class="quiz-modal__overlay" data-close-quiz></div>
+        
+        <div class="quiz-modal__content">
+            <button class="quiz-modal__close" data-close-quiz aria-label="Закрыть">&times;</button>
+            
+            <header class="quiz-modal__header">
+                <span class="quiz-modal__subtitle">Рассчитайте стоимость, ответив на 6 простых вопросов</span>
+            </header>
+
+            <form class="quiz-form" id="quizForm">
+                <!-- Шаг 1 -->
+                <div class="quiz-step active" data-step="1">
+                    <h3 class="quiz-step__title">Какой у вас объект?</h3>
+                    <div class="quiz-step__body quiz-step__body--with-img">
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="object_type" value="Квартира - Новостройка">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Квартира — Новостройка</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="object_type" value="Квартира - Вторичка">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Квартира — Вторичка</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="object_type" value="Загородный дом">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Загородный дом</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="object_type" value="Офис">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Офис</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="object_type" value="Коммерческое помещение">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Коммерческое помещение</span>
+                            </label>
+                        </div>
+                        <div class="quiz-step__media">
+                            <img src="images/quiz/1_q.webp" alt="Интерьер объекта">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 2 -->
+                <div class="quiz-step" data-step="2">
+                    <h3 class="quiz-step__title">Укажите площадь помещения</h3>
+                    <div class="quiz-step__body">
+                        <div class="quiz-options quiz-options--grid">
+                            <label class="quiz-option">
+                                <input type="radio" name="area" value="От 70 до 100 кв. м.">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">От 70 до 100 кв. м.</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="area" value="От 100 до 200 кв. м.">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">От 100 до 200 кв. м.</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="area" value="Больше 200 кв. м.">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Больше 200 кв. м.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 3 -->
+                <div class="quiz-step" data-step="3">
+                    <h3 class="quiz-step__title">Какой стиль вам нравится?</h3>
+                    <div class="quiz-step__body">
+                        <div class="quiz-cards">
+                            <label class="quiz-card">
+                                <input type="radio" name="style" value="Современный/Минимализм/Лофт">
+                                <div class="quiz-card__content">
+                                    <img src="images/quiz/3.1_q.webp" alt="Современный стиль">
+                                    <span>Современный / Минимализм / Лофт</span>
+                                </div>
+                            </label>
+                            <label class="quiz-card">
+                                <input type="radio" name="style" value="Неоклассика/Классика/Арт-деко">
+                                <div class="quiz-card__content">
+                                    <img src="images/quiz/3.2_q.jpg" alt="Классический стиль">
+                                    <span>Неоклассика / Классика / Арт-деко</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 4 -->
+                <div class="quiz-step" data-step="4">
+                    <h3 class="quiz-step__title">Что вы хотите получить?</h3>
+                    <div class="quiz-step__body quiz-step__body--with-img">
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="Продуманное планировочное решение">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Продуманное планировочное решение, дальше я сам(а)</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="Только чертежи">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Я знаю какой ремонт у меня будет, мне нужны только чертежи</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="Полный дизайн проект">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Мне нужен полный дизайн-проект</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="Ремонт под ключ">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Мне нужен ремонт "под ключ"</span>
+                            </label>
+                        </div>
+                        <div class="quiz-step__media">
+                            <img src="images/quiz/4_q.jpg" alt="Чертежи">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 5 -->
+                <div class="quiz-step" data-step="5">
+                    <h3 class="quiz-step__title">Насколько вы готовы участвовать в процессе реализации?</h3>
+                    <div class="quiz-step__body quiz-step__body--with-img">
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="participation" value="Контролировать весь процесс">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">У меня есть время контролировать весь процесс</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="participation" value="Нужна помощь дизайнера">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Я готов(а) участвовать в проекте, но нужна помощь дизайнера</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="participation" value="Полное сопровождение">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">У меня нет времени, нужно полное сопровождение</span>
+                            </label>
+                        </div>
+                        <div class="quiz-step__media">
+                            <img src="images/quiz/5_q.jpg" alt="Сопровождение">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 6 -->
+                <div class="quiz-step" data-step="6">
+                    <h3 class="quiz-step__title">Сколько времени вы готовы ждать проект?</h3>
+                    <div class="quiz-step__body quiz-step__body--with-img">
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="timeline" value="1-2 месяца">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Проект нужен через 1–2 месяца</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="timeline" value="3-6 месяцев">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Могу подождать 3–6 месяцев</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="timeline" value="Через год">
+                                <span class="quiz-option__control"></span>
+                                <span class="quiz-option__text">Ремонт планируется через год</span>
+                            </label>
+                        </div>
+                        <div class="quiz-step__media">
+                            <img src="images/quiz/6_q.webp" alt="Время">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Финальный шаг — Форма контактов -->
+                <div class="quiz-step" data-step="7">
+                    <div class="quiz-final">
+                        <h3 class="quiz-final__title">Оставьте заявку</h3>
+                        <p class="quiz-final__subtitle">Получите гарантированную скидку на дизайн-проект</p>
+                        
+                        <div class="quiz-final__fields">
+                            <div class="quiz-field">
+                                <label>Введите имя</label>
+                                <input type="text" name="user_name" placeholder="Арман" required>
+                            </div>
+                            <div class="quiz-field">
+                                <label>Введите телефон</label>
+                                <input type="tel" name="user_phone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <button type="submit" class="quiz-btn quiz-btn--submit">Получить результаты</button>
+
+                            <label class="quiz-checkbox">
+                                <input type="checkbox" name="privacy_agree" required checked>
+                                <span class="quiz-checkbox__text">
+                                    Я соглашаюсь на <a href="https://adilet.zan.kz/rus/docs/Z1300000094" target="_blank">обработку персональных данных</a> согласно политике конфиденциальности
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Подвал квиза (Прогресс и навигация) -->
+                <footer class="quiz-modal__footer">
+                    <div class="quiz-progress">
+                        <span class="quiz-progress__label">Готово: <strong id="quizProgressPercent">0%</strong></span>
+                        <div class="quiz-progress__bar">
+                            <div class="quiz-progress__fill" id="quizProgressFill"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-actions">
+                        <button type="button" class="quiz-btn quiz-btn--prev" id="quizPrevBtn" disabled>&larr;</button>
+                        <button type="button" class="quiz-btn quiz-btn--next" id="quizNextBtn" disabled>Далее &rarr;</button>
+                    </div>
+                </footer>
+            </form>
+
+            <div class="quiz-success" id="quizSuccess">
+                <span class="quiz-success__icon">&#10003;</span>
+                <p class="quiz-success__title">Заявка отправлена</p>
+                <p class="quiz-success__text">Мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
