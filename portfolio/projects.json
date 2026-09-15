@@ -2,35 +2,35 @@
   {
     "id": "project-01",
     "title": "Название проекта 1",
-    "cover": "/images/portfolio/project-01/1_View02_Post.webp",
+    "cover": "images/portfolio/project-01/1_View02_Post.webp",
     "images": [
-      "/images/portfolio/project-01/1_View02_Post.webp",
-      "/images/portfolio/project-01/1_View05_Post.webp",
-      "/images/portfolio/project-01/1_View09_Post-1.webp"
+      "images/portfolio/project-01/1_View02_Post.webp",
+      "images/portfolio/project-01/1_View05_Post.webp",
+      "images/portfolio/project-01/1_View09_Post-1.webp"
     ]
   },
   {
     "id": "project-02",
     "title": "Название проекта 2",
-    "cover": "/images/portfolio/project-02/dizajn-salona-okrashivaniya-volos-prizma.webp",
+    "cover": "images/portfolio/project-02/dizajn-salona-okrashivaniya-volos-prizma.webp",
     "images": [
-      "/images/portfolio/project-02/dizajn-salona-okrashivaniya-volos-prizma.webp",
-      "/images/portfolio/project-02/prizma-4.webp",
-      "/images/portfolio/project-02/prizma-5.webp"
+      "images/portfolio/project-02/dizajn-salona-okrashivaniya-volos-prizma.webp",
+      "images/portfolio/project-02/prizma-4.webp",
+      "images/portfolio/project-02/prizma-5.webp"
     ]
   },
   {
     "id": "project-03",
     "title": "Название проекта 3",
-    "cover": "/images/portfolio/project-03/avenue-02.jpg.webp",
+    "cover": "images/portfolio/project-03/avenue-02.jpg.webp",
     "images": [
-      "images/portfolio/project-03/images (1).jpeg"
+      "images/portfolio/project-03images (1).jpeg"
     ]
   },
   {
     "id": "project-04",
     "title": "Название проекта 4",
-    "cover": "/images/portfolio/project-04/1-gostinaya-1_post2-1.png.webp",
+    "cover": "images/portfolio/project-04/1-gostinaya-1_post2-1.png.webp",
     "images": [
       "images/portfolio/project-04/cover_6-1024x644.jpg"
     ]
@@ -38,7 +38,7 @@
   {
     "id": "project-05",
     "title": "Название проекта 5",
-    "cover": "/images/portfolio/project-05/1-17.jpg.webp",
+    "cover": "images/portfolio/project-05/1-17.jpg.webp",
     "images": [
       "images/portfolio/project-05/images.jpeg"
     ]
@@ -46,7 +46,7 @@
   {
     "id": "project-06",
     "title": "Название проекта 6",
-    "cover": "/images/portfolio/project-06/1-2-scaled.jpg.webp",
+    "cover": "images/portfolio/project-06/1-2-scaled.jpg.webp",
     "images": [
       "images/portfolio/project-06/KMO_090981_20485_1_t218_170143.jpg"
     ]
@@ -54,7 +54,7 @@
   {
     "id": "project-07",
     "title": "Название проекта 7",
-    "cover": "/images/portfolio/project-07/01-gigapixel.jpg.webp",
+    "cover": "images/portfolio/project-07/01-gigapixel.jpg.webp",
     "images": [
       "images/portfolio/project-07/images (2).jpeg"
     ]
@@ -62,7 +62,7 @@
   {
     "id": "project-08",
     "title": "Название проекта 8",
-    "cover": "/images/portfolio/project-08/07-2.png.webp",
+    "cover": "images/portfolio/project-08/07-2.png.webp",
     "images": [
       "images/portfolio/project-08/331x232_1_2144a966cb998a4375c419a02cc5e04e@1200x840_0xemf0lgpv_2186864119614076990.jpg.webp"
     ]
@@ -70,7 +70,7 @@
   {
     "id": "project-09",
     "title": "Название проекта 9",
-    "cover": "/images/portfolio/project-09/1-2-1.jpg.webp",
+    "cover": "images/portfolio/project-09/1-2-1.jpg.webp",
     "images": [
       "images/portfolio/project-09/images (3).jpeg"
     ]
