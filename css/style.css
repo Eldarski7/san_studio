@@ -20,7 +20,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('./fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff2') format('woff2');
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -28,7 +28,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('./fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.woff2') format('woff2');
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -36,7 +36,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('./fonts/PlayfairDisplay/PlayfairDisplay-Medium.woff2') format('woff2');
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -44,7 +44,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('./fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff2') format('woff2');
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -52,7 +52,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('./fonts/PlayfairDisplay/PlayfairDisplay-Italic.woff2') format('woff2');
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -60,7 +60,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Roboto;
-    src: url('./fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+    src: url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -68,7 +68,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Inter;
-    src: url('./fonts/Inter/Inter_18pt-Bold.woff2') format('woff2');
+    src: url('../fonts/Inter/Inter_18pt-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -76,7 +76,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Inter;
-    src: url('./fonts/Inter/Inter_18pt-Medium.woff2') format('woff2');
+    src: url('../fonts/Inter/Inter_18pt-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -84,7 +84,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Inter;
-    src: url('./fonts/Inter/Inter_18pt-Regular.woff2') format('woff2');
+    src: url('../fonts/Inter/Inter_18pt-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -92,7 +92,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Inter;
-    src: url('./fonts/Inter/Inter_28pt-Light.woff2') format('woff2');
+    src: url('../fonts/Inter/Inter_28pt-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -100,7 +100,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Prata;
-    src: url('./fonts/Prata/Prata-Regular.woff2') format('woff2');
+    src: url('../fonts/Prata/Prata-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -108,7 +108,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Libre_Bodoni;
-    src: url('./fonts/Libre_Bodoni/LibreBodoni-VariableFont_wght.woff2') format('woff2');
+    src: url('../fonts/Libre_Bodoni/LibreBodoni-VariableFont_wght.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -116,7 +116,7 @@ button, input, textarea, select {
 
 @font-face {
     font-family: Libre_Bodoni;
-    src: url('./fonts/Libre_Bodoni/LibreBodoni-VariableFont_wght.woff2') format('woff2');
+    src: url('../fonts/Libre_Bodoni/LibreBodoni-VariableFont_wght.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
