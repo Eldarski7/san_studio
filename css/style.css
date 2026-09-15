@@ -162,7 +162,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     justify-items: center;
-    background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)), url('images/backgrounds/hero_bg_1920x1080.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)), url('../images/backgrounds/hero_bg_1920x1080.jpg');
     background-size: cover;
     background-position: center;
     padding: clamp(24px, 4vw, 40px) 0 clamp(32px, 6vw, 60px);
