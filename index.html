@@ -54,7 +54,7 @@
 
             <button type="button" class="video-presentation__preview" id="videoPreview" aria-label="Открыть видео о студии">
                 <video class="video-presentation__video" id="videoPreviewPlayer" autoplay muted loop playsinline preload="auto">
-                    <source src="videos/%D0%92%D0%98%D0%94%D0%95%D0%9E%20%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92%20MK-Interio.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/sydjpkw9/video/upload/f_auto,q_auto/%D0%92%D0%98%D0%94%D0%95%D0%9E_%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92_MK-Interio.mp4" type="video/mp4">
                 </video>
                 <span class="video-presentation__play" aria-hidden="true">&#9654;</span>
             </button>
@@ -327,9 +327,14 @@
     <div class="video-lightbox" id="videoLightbox" aria-hidden="true">
         <button type="button" class="video-lightbox__close" id="videoLightboxClose" aria-label="Закрыть">&times;</button>
         <div class="video-lightbox__stage">
-            <video class="video-lightbox__player" id="videoLightboxPlayer" controls playsinline preload="metadata">
-                <source src="videos/%D0%92%D0%98%D0%94%D0%95%D0%9E%20%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92%20MK-Interio.mp4" type="video/mp4">
-            </video>
+            <iframe
+                class="video-lightbox__player"
+                id="videoLightboxPlayer"
+                src="https://player.cloudinary.com/embed/?cloud_name=sydjpkw9&public_id=%D0%92%D0%98%D0%94%D0%95%D0%9E_%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92_MK-Interio"
+                title="Видео о студии SAN STUDIO"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 
