@@ -581,6 +581,7 @@ const grid = document.querySelector('.partners__grid');
 
 const contactFloat = document.getElementById('contactFloat');
 const contactFloatToggle = document.getElementById('contactFloatToggle');
+const heroQuizButton = document.querySelector('.hero__button');
 
 contactFloatToggle.addEventListener('click', () => {
     const isOpen = contactFloat.classList.toggle('is-open');
@@ -595,6 +596,23 @@ document.addEventListener('click', (event) => {
         contactFloatToggle.setAttribute('aria-label', 'Открыть контакты');
     }
 });
+
+// Пока CTA-кнопка hero видна, плавающий виджет не перекрывает ее touch-зону на мобильных.
+if (heroQuizButton && 'IntersectionObserver' in window) {
+    let isHeroQuizVisible = false;
+
+    function updateContactVisibility() {
+        contactFloat.classList.toggle('is-hidden', isHeroQuizVisible && window.innerWidth <= 768);
+    }
+
+    const contactVisibilityObserver = new IntersectionObserver(([entry]) => {
+        isHeroQuizVisible = entry.isIntersecting;
+        updateContactVisibility();
+    }, { threshold: 0.1 });
+
+    contactVisibilityObserver.observe(heroQuizButton);
+    window.addEventListener('resize', updateContactVisibility);
+}
 
 let isDragging = false;
 let startX = 0;
