@@ -577,69 +577,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const grid = document.querySelector('.partners__grid');
 
-// ==================== ПЛАВАЮЩИЕ КОНТАКТЫ ====================
-
-const contactFloat = document.getElementById('contactFloat');
-const contactFloatToggle = document.getElementById('contactFloatToggle');
-const interactiveElements = document.querySelectorAll('button, a');
-
-contactFloatToggle.addEventListener('click', () => {
-    const isOpen = contactFloat.classList.toggle('is-open');
-    contactFloatToggle.setAttribute('aria-expanded', String(isOpen));
-    contactFloatToggle.setAttribute('aria-label', isOpen ? 'Закрыть контакты' : 'Открыть контакты');
-});
-
-document.addEventListener('click', (event) => {
-    if (!contactFloat.contains(event.target)) {
-        contactFloat.classList.remove('is-open');
-        contactFloatToggle.setAttribute('aria-expanded', 'false');
-        contactFloatToggle.setAttribute('aria-label', 'Открыть контакты');
-    }
-});
-
-// Разводим виджет и CTA, если при прокрутке они визуально пересекаются.
-function updateContactCollision() {
-    contactFloat.style.setProperty('--contact-shift-y', '0px');
-
-    if (window.innerWidth > 768) {
-        return;
-    }
-
-    const contactRect = contactFloat.getBoundingClientRect();
-    let requiredShift = 0;
-
-    interactiveElements.forEach((element) => {
-        if (contactFloat.contains(element)) {
-            return;
-        }
-
-        const elementRect = element.getBoundingClientRect();
-        const isVisible = elementRect.width > 0 && elementRect.height > 0;
-        const overlaps = contactRect.left < elementRect.right
-            && contactRect.right > elementRect.left
-            && contactRect.top < elementRect.bottom
-            && contactRect.bottom > elementRect.top;
-
-        if (isVisible && overlaps) {
-            requiredShift = Math.max(requiredShift, contactRect.bottom - elementRect.top + 16);
-        }
-    });
-
-    if (requiredShift > 0) {
-        contactFloat.style.setProperty('--contact-shift-y', `-${requiredShift}px`);
-    }
-}
-
-let collisionFrame;
-function scheduleContactCollisionUpdate() {
-    cancelAnimationFrame(collisionFrame);
-    collisionFrame = requestAnimationFrame(updateContactCollision);
-}
-
-window.addEventListener('scroll', scheduleContactCollisionUpdate, { passive: true });
-window.addEventListener('resize', scheduleContactCollisionUpdate);
-scheduleContactCollisionUpdate();
-
 let isDragging = false;
 let startX = 0;
 let startScrollLeft = 0;
