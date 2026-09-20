@@ -197,6 +197,35 @@ body {
     transform: scale(1.08);
 }
 
+.nav__contacts {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 1.6vw, 24px);
+}
+
+.nav__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav__socials a {
+    display: inline-flex;
+    color: var(--color-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav__socials a:hover {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.72;
+}
+
+.nav__socials svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
 .nav__menu {
     display: flex;
     gap: clamp(13px, 1.6vw, 26px);
@@ -1383,8 +1412,8 @@ body {
 }
 
 .footer__social-icon {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
 }
 
 .footer__socials a:hover {
@@ -1479,8 +1508,8 @@ body {
 }
 
 .contact-float__toggle {
-    width: 58px;
-    height: 58px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     background-color: var(--color-pink);
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
@@ -1494,8 +1523,8 @@ body {
 }
 
 .contact-float__toggle svg {
-    width: 25px;
-    height: 25px;
+    width: 31px;
+    height: 31px;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.8;
@@ -1550,13 +1579,18 @@ body {
 
 @media (max-width: 640px) {
     .contact-float {
-        right: 26px;
-        bottom: 26px;
+        right: 36px;
+        bottom: 36px;
     }
 
     .contact-float__toggle {
-        width: 52px;
-        height: 52px;
+        width: 66px;
+        height: 66px;
+    }
+
+    .contact-float__toggle svg {
+        width: 29px;
+        height: 29px;
     }
 }
 
@@ -1632,6 +1666,10 @@ body {
 
     .nav__burger {
         display: flex;
+    }
+
+    .nav__socials {
+        display: none;
     }
 
     .nav__menu {
