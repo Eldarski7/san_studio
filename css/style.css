@@ -1497,6 +1497,8 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 12px;
+    transform: translateY(var(--contact-shift-y, 0px));
+    transition: transform 0.25s ease;
 }
 
 .contact-float__toggle,
