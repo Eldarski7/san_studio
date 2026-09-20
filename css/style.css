@@ -1459,8 +1459,8 @@ body {
 
 .contact-float {
     position: fixed;
-    right: clamp(18px, 3vw, 38px);
-    bottom: clamp(18px, 3vw, 38px);
+    right: clamp(28px, 4vw, 52px);
+    bottom: clamp(28px, 4vw, 52px);
     z-index: 250;
     display: flex;
     flex-direction: column;
@@ -1550,8 +1550,8 @@ body {
 
 @media (max-width: 640px) {
     .contact-float {
-        right: 16px;
-        bottom: 16px;
+        right: 26px;
+        bottom: 26px;
     }
 
     .contact-float__toggle {
