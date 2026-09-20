@@ -45,6 +45,22 @@
         </div>
     </header>
 
+    <section class="video-presentation" id="videoPresentation">
+        <div class="container">
+            <div class="video-presentation__intro">
+                <span class="video-presentation__label">ВИДЕО О СТУДИИ</span>
+                <h2 class="video-presentation__title">Пространство,<br><em>которое говорит</em> само за себя</h2>
+            </div>
+
+            <button type="button" class="video-presentation__preview" id="videoPreview" aria-label="Открыть видео о студии">
+                <video class="video-presentation__video" id="videoPreviewPlayer" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/%D0%92%D0%98%D0%94%D0%95%D0%9E%20%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92%20MK-Interio.mp4" type="video/mp4">
+                </video>
+                <span class="video-presentation__play" aria-hidden="true">&#9654;</span>
+            </button>
+        </div>
+    </section>
+
     <section class="approach" id="approach">
         <div class="container">
             <div class="approach__intro">
@@ -261,6 +277,26 @@
         </div>
     </section>
 
+    <section class="virtual-tour" id="virtualTour">
+        <div class="container">
+            <div class="virtual-tour__intro">
+                <span class="virtual-tour__label">ВИРТУАЛЬНЫЙ ТУР</span>
+                <h2 class="virtual-tour__title">Окажитесь внутри<br><em>будущего интерьера</em></h2>
+                <p class="virtual-tour__text">Исследуйте пространство самостоятельно: вращайте панораму, приближайте детали и почувствуйте атмосферу проекта.</p>
+            </div>
+
+            <div class="virtual-tour__frame">
+                <iframe
+                    src="https://kuula.co/share/hzjcg?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1"
+                    title="Интерактивный 3D-тур интерьера SAN STUDIO"
+                    loading="lazy"
+                    allow="fullscreen; xr-spatial-tracking"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" id="cta">
         <div class="container">
             <div class="cta__inner">
@@ -286,6 +322,15 @@
             <span class="lightbox__counter" id="lightboxCounter"></span>
         </div>
         <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее фото">&rsaquo;</button>
+    </div>
+
+    <div class="video-lightbox" id="videoLightbox" aria-hidden="true">
+        <button type="button" class="video-lightbox__close" id="videoLightboxClose" aria-label="Закрыть">&times;</button>
+        <div class="video-lightbox__stage">
+            <video class="video-lightbox__player" id="videoLightboxPlayer" controls playsinline preload="metadata">
+                <source src="videos/%D0%92%D0%98%D0%94%D0%95%D0%9E%20%D0%98%D0%9D%D0%A2%D0%95%D0%A0%D0%AC%D0%95%D0%A0%D0%9E%D0%92%20MK-Interio.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
     <!-- Модалка формы "Получить консультацию" -->
@@ -562,7 +607,6 @@
             <button class="quiz-modal__close" data-close-quiz aria-label="Закрыть">&times;</button>
             
             <header class="quiz-modal__header">
-                <span class="quiz-modal__subtitle">Рассчитайте стоимость, ответив на 6 простых вопросов</span>
             </header>
 
             <form class="quiz-form" id="quizForm">

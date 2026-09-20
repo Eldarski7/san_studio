@@ -155,6 +155,40 @@ lightbox.addEventListener('click', (event) => {
     }
 });
 
+// ==================== ЛАЙТБОКС ВИДЕО ====================
+
+const videoPreview = document.getElementById('videoPreview');
+const videoPreviewPlayer = document.getElementById('videoPreviewPlayer');
+const videoLightbox = document.getElementById('videoLightbox');
+const videoLightboxPlayer = document.getElementById('videoLightboxPlayer');
+const videoLightboxClose = document.getElementById('videoLightboxClose');
+
+function openVideoLightbox() {
+    videoLightbox.classList.add('is-open');
+    videoLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    videoPreviewPlayer.pause();
+    videoLightboxPlayer.currentTime = 0;
+    videoLightboxPlayer.play();
+}
+
+function closeVideoLightbox() {
+    videoLightboxPlayer.pause();
+    videoLightbox.classList.remove('is-open');
+    videoLightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    videoPreviewPlayer.play();
+}
+
+videoPreview.addEventListener('click', openVideoLightbox);
+videoLightboxClose.addEventListener('click', closeVideoLightbox);
+
+videoLightbox.addEventListener('click', (event) => {
+    if (event.target === videoLightbox) {
+        closeVideoLightbox();
+    }
+});
+
 // Управление с клавиатуры: Escape закрывает, стрелки листают
 document.addEventListener('keydown', (event) => {
     if (!lightbox.classList.contains('is-open')) {
@@ -167,6 +201,12 @@ document.addEventListener('keydown', (event) => {
         showPrev();
     } else if (event.key === 'ArrowRight') {
         showNext();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && videoLightbox.classList.contains('is-open')) {
+        closeVideoLightbox();
     }
 });
 
