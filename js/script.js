@@ -160,15 +160,19 @@ lightbox.addEventListener('click', (event) => {
 const videoPreview = document.getElementById('videoPreview');
 const videoPreviewPlayer = document.getElementById('videoPreviewPlayer');
 const videoLightbox = document.getElementById('videoLightbox');
+const videoLightboxPlayer = document.getElementById('videoLightboxPlayer');
 const videoLightboxClose = document.getElementById('videoLightboxClose');
 
 function openVideoLightbox() {
     videoLightbox.classList.add('is-open');
     videoLightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    videoLightboxPlayer.currentTime = 0;
+    videoLightboxPlayer.play();
 }
 
 function closeVideoLightbox() {
+    videoLightboxPlayer.pause();
     videoLightbox.classList.remove('is-open');
     videoLightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
