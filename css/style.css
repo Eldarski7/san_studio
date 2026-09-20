@@ -271,6 +271,10 @@ body {
     white-space: nowrap;
 }
 
+.nav__phone-icon {
+    display: none;
+}
+
 .nav__burger {
     display: none;
     flex-direction: column;
@@ -1558,8 +1562,36 @@ body {
         display: flex;
     }
 
+    .nav__contacts {
+        gap: 12px;
+    }
+
     .nav__socials {
+        display: flex;
+        order: 2;
+        gap: 12px;
+    }
+
+    .nav__phone {
+        order: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__phone-number {
         display: none;
+    }
+
+    .nav__phone-icon {
+        display: block;
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
 
     .nav__menu {
