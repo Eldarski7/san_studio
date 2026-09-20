@@ -577,6 +577,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const grid = document.querySelector('.partners__grid');
 
+// ==================== ПЛАВАЮЩИЕ КОНТАКТЫ ====================
+
+const contactFloat = document.getElementById('contactFloat');
+const contactFloatToggle = document.getElementById('contactFloatToggle');
+
+contactFloatToggle.addEventListener('click', () => {
+    const isOpen = contactFloat.classList.toggle('is-open');
+    contactFloatToggle.setAttribute('aria-expanded', String(isOpen));
+    contactFloatToggle.setAttribute('aria-label', isOpen ? 'Закрыть контакты' : 'Открыть контакты');
+});
+
+document.addEventListener('click', (event) => {
+    if (!contactFloat.contains(event.target)) {
+        contactFloat.classList.remove('is-open');
+        contactFloatToggle.setAttribute('aria-expanded', 'false');
+        contactFloatToggle.setAttribute('aria-label', 'Открыть контакты');
+    }
+});
+
 let isDragging = false;
 let startX = 0;
 let startScrollLeft = 0;

@@ -1455,6 +1455,111 @@ body {
     color: #8a8578;
 }
 
+/* ==================== ПЛАВАЮЩИЕ КОНТАКТЫ ==================== */
+
+.contact-float {
+    position: fixed;
+    right: clamp(18px, 3vw, 38px);
+    bottom: clamp(18px, 3vw, 38px);
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.contact-float__toggle,
+.contact-float__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.contact-float__toggle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: var(--color-pink);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-float__toggle:hover,
+.contact-float.is-open .contact-float__toggle {
+    background-color: var(--color-accent-warm);
+    transform: scale(1.06);
+}
+
+.contact-float__toggle svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.contact-float__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.contact-float.is-open .contact-float__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.contact-float__link {
+    gap: 10px;
+    min-width: 148px;
+    justify-content: flex-start;
+    padding: 10px 14px;
+    border-radius: 4px;
+    background-color: var(--color-text-dark);
+    color: var(--color-primary);
+    font-family: var(--font-inter);
+    font-size: 12px;
+    text-decoration: none;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-float__link:hover {
+    background-color: var(--color-accent-warm);
+    transform: translateX(-4px);
+}
+
+.contact-float__link svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+@media (max-width: 640px) {
+    .contact-float {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .contact-float__toggle {
+        width: 52px;
+        height: 52px;
+    }
+}
+
 @media (max-width: 1024px) {
     .footer__content {
         grid-template-columns: 1fr 1fr;
