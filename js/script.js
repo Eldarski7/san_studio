@@ -305,22 +305,54 @@ phoneInput.addEventListener('input', () => {
     phoneInput.value = formatted;
 });
 
-// Заготовка обработки отправки — сюда позже подключишь реальную отправку (fetch на бэкенд, Telegram-бот и т.д.)
-consultForm.addEventListener('submit', (event) => {
+async function submitLead(form) {
+    const formData = new FormData(form);
+    formData.set('form_type', form.dataset.formType || 'unknown');
+    const response = await fetch('api/submit.php', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Не удалось отправить заявку');
+    }
+}
+
+function showFormError(form, message) {
+    let error = form.querySelector('.form-error');
+
+    if (!error) {
+        error = document.createElement('p');
+        error.className = 'form-error';
+        form.append(error);
+    }
+
+    error.textContent = message;
+}
+
+consultForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const submitButton = consultForm.querySelector('[type="submit"]');
 
-    // Пример: собрать данные формы перед отправкой
-    // const formData = new FormData(consultForm);
+    submitButton.disabled = true;
 
-    // Вместо мгновенного закрытия — прячем форму и показываем экран "Заявка отправлена"
-    consultForm.style.display = 'none';
-    modalSuccess.classList.add('is-visible');
+    try {
+        await submitLead(consultForm);
+        consultForm.style.display = 'none';
+        modalSuccess.classList.add('is-visible');
 
-    // Через 3 секунды закрываем модалку сама, форма уже сброшена
-    setTimeout(() => {
-        closeModal();
-        consultForm.reset();
-    }, 3000);
+        setTimeout(() => {
+            closeModal();
+            consultForm.reset();
+        }, 3000);
+    } catch (error) {
+        showFormError(consultForm, 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.');
+    } finally {
+        submitButton.disabled = false;
+    }
 });
 
 // ==================== МОДАЛКА: "ОСТАВЬТЕ ЗАЯВКУ" (кнопки "ЗАКАЗАТЬ" в пакетах услуг) ====================
@@ -333,7 +365,11 @@ const orderForm = document.getElementById('orderForm');
 const orderModalSuccess = document.getElementById('orderModalSuccess');
 const orderTriggers = document.querySelectorAll('[data-open-order]');
 
-function openOrderModal() {
+let selectedPackage = '';
+
+function openOrderModal(packageName) {
+    selectedPackage = packageName || '';
+    orderForm.querySelector('[name="package"]').value = selectedPackage;
     orderModal.classList.add('is-open');
     orderModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -352,7 +388,7 @@ function closeOrderModal() {
 orderTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
         event.preventDefault();
-        openOrderModal();
+        openOrderModal(trigger.dataset.package);
     });
 });
 
@@ -401,18 +437,28 @@ if (orderPhoneInput) {
     });
 }
 
-orderForm.addEventListener('submit', (event) => {
+orderForm.insertAdjacentHTML('afterbegin', '<input type="hidden" name="package">');
+
+orderForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const submitButton = orderForm.querySelector('[type="submit"]');
 
-    // Вместо мгновенного закрытия — прячем форму и показываем экран "Заявка отправлена"
-    orderFinalBlock.style.display = 'none';
-    orderModalSuccess.classList.add('is-visible');
+    submitButton.disabled = true;
 
-    // Через 3 секунды закрываем модалку сама, форма уже сброшена
-    setTimeout(() => {
-        closeOrderModal();
-        orderForm.reset();
-    }, 3000);
+    try {
+        await submitLead(orderForm);
+        orderFinalBlock.style.display = 'none';
+        orderModalSuccess.classList.add('is-visible');
+
+        setTimeout(() => {
+            closeOrderModal();
+            orderForm.reset();
+        }, 3000);
+    } catch (error) {
+        showFormError(orderForm, 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.');
+    } finally {
+        submitButton.disabled = false;
+    }
 });
 
 // ==================== КВИЗ "РАССЧИТАТЬ СТОИМОСТЬ" ====================
@@ -498,22 +544,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        quizForm.addEventListener('submit', (e) => {
+        quizForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const formData = new FormData(quizForm);
-            console.log('Результаты квиза:', Object.fromEntries(formData.entries()));
+            const submitButton = quizForm.querySelector('[type="submit"]');
 
-            // Вместо alert — прячем форму и показываем экран "Заявка отправлена"
-            quizForm.style.display = 'none';
-            quizSuccess.classList.add('is-visible');
+            submitButton.disabled = true;
 
-            // Через 3 секунды закрываем модалку сама, сбрасываем форму и шаг квиза
-            setTimeout(() => {
-                modal.classList.remove('is-open');
-                quizForm.reset();
-                currentStep = 1;
-                updateQuiz();
-            }, 3000);
+            try {
+                await submitLead(quizForm);
+                quizForm.style.display = 'none';
+                quizSuccess.classList.add('is-visible');
+
+                setTimeout(() => {
+                    modal.classList.remove('is-open');
+                    quizForm.reset();
+                    currentStep = 1;
+                    updateQuiz();
+                }, 3000);
+            } catch (error) {
+                showFormError(quizForm, 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.');
+            } finally {
+                submitButton.disabled = false;
+            }
         });
     }
 

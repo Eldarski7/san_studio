@@ -16,6 +16,21 @@ button, input, textarea, select {
     font-family: inherit;
 }
 
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-error {
+    margin-top: 12px;
+    color: #a33b3b;
+    font-size: 14px;
+}
+
 /* ==================== ШРИФТЫ ==================== */
 
 @font-face {

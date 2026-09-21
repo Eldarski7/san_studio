@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San studio - Дизайн интерьера в Алматы</title>
+    <meta name="description" content="SAN STUDIO — дизайн интерьера в Алматы: планировочные решения, 3D-визуализация, рабочая документация и авторское сопровождение.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="canonical" href="https://sanstudio.kz/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_KZ">
+    <meta property="og:site_name" content="SAN STUDIO">
+    <meta property="og:title" content="SAN STUDIO — дизайн интерьера в Алматы">
+    <meta property="og:description" content="Создаём продуманные интерьеры для квартир, домов и коммерческих пространств в Алматы.">
+    <meta property="og:url" content="https://sanstudio.kz/">
+    <meta property="og:image" content="https://sanstudio.kz/images/backgrounds/hero_bg_1920x1080.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "InteriorDesigner",
+        "name": "SAN STUDIO",
+        "url": "https://sanstudio.kz/",
+        "image": "https://sanstudio.kz/images/backgrounds/hero_bg_1920x1080.jpg",
+        "telephone": "+77052161068",
+        "email": "info@sanstudio.kz",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Алматы",
+            "addressCountry": "KZ"
+        },
+        "areaServed": "Алматы"
+    }
+    </script>
+    <title>SAN STUDIO — дизайн интерьера в Алматы</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -142,8 +170,9 @@
 
                 <div class="about__right">
                     <p class="about__text">
-                        Мы — команда дизайнеров, архитекторов и специалистов по реализации,
-                        объединённых любовью к современному интерьеру и вниманием к деталям.
+                        SAN STUDIO — студия дизайна интерьера в Алматы. Мы — команда дизайнеров,
+                        архитекторов и специалистов по реализации, объединённых любовью к современному
+                        интерьеру и вниманием к деталям.
                     </p>
                     <p class="about__text">
                         За годы работы мы сформировали подход, в котором эстетика сочетается с
@@ -259,7 +288,7 @@
                     <span class="portfolio__item-title">Название проекта 2</span>
                 </button>
 
-                <button type="button" class="portfolio__item" data-project="project-03" style="background-image: url('images/portfolio/project-01.jpg');">
+                <button type="button" class="portfolio__item" data-project="project-03" style="background-image: url('images/portfolio/project-03/avenue-02.jpg.webp');">
                     <span class="portfolio__item-title">Название проекта 3</span>
                 </button>
 
@@ -358,7 +387,8 @@
         <div class="modal__dialog">
             <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть">&times;</button>
 
-            <form class="modal__form" id="consultForm">
+            <form class="modal__form" id="consultForm" data-form-type="consultation">
+                <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <div class="modal__field">
                     <label for="objectType">Тип объекта</label>
                     <select id="objectType" name="objectType" required>
@@ -411,7 +441,8 @@
                 <h3 class="quiz-final__title">Оставьте заявку</h3>
                 <p class="quiz-final__subtitle">Мы свяжемся с вами и обсудим детали выбранного пакета</p>
 
-                <form class="quiz-final__fields" id="orderForm">
+                <form class="quiz-final__fields" id="orderForm" data-form-type="package">
+                    <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="quiz-field">
                         <label>Введите имя</label>
                         <input type="text" name="order_name" placeholder="Арман" required>
@@ -502,7 +533,7 @@
                         <li>План привязки сан.техники</li>
                         <li class="is-disabled">3D Визуализация</li>
                     </ul>
-                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                    <button type="button" class="pricing__button" data-open-order data-package="START">ЗАКАЗАТЬ</button>
                 </div>
 
                 <div class="pricing__card">
@@ -517,7 +548,7 @@
                         <li class="is-disabled">Авторский надзор</li>
                         <li class="is-disabled">Комплектация</li>
                     </ul>
-                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                    <button type="button" class="pricing__button" data-open-order data-package="REGULAR">ЗАКАЗАТЬ</button>
                 </div>
 
                 <div class="pricing__card">
@@ -532,7 +563,7 @@
                         <li class="is-disabled">Авторский надзор</li>
                         <li class="is-disabled">Комплектация</li>
                     </ul>
-                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                    <button type="button" class="pricing__button" data-open-order data-package="COMFORT">ЗАКАЗАТЬ</button>
                 </div>
 
                 <div class="pricing__card">
@@ -547,7 +578,7 @@
                         <li>Авторский надзор</li>
                         <li>Комплектация</li>
                     </ul>
-                    <button type="button" class="pricing__button" data-open-order>ЗАКАЗАТЬ</button>
+                    <button type="button" class="pricing__button" data-open-order data-package="BUSINESS">ЗАКАЗАТЬ</button>
                 </div>
 
             </div>
@@ -632,7 +663,8 @@
             <header class="quiz-modal__header">
             </header>
 
-            <form class="quiz-form" id="quizForm">
+            <form class="quiz-form" id="quizForm" data-form-type="quiz">
+                <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <!-- Шаг 1 -->
                 <div class="quiz-step active" data-step="1">
                     <h3 class="quiz-step__title">Какой у вас объект?</h3>
