@@ -162,17 +162,47 @@ const videoPreviewPlayer = document.getElementById('videoPreviewPlayer');
 const videoLightbox = document.getElementById('videoLightbox');
 const videoLightboxPlayer = document.getElementById('videoLightboxPlayer');
 const videoLightboxClose = document.getElementById('videoLightboxClose');
+const videoMobileViewport = window.matchMedia('(max-width: 768px)');
+
+function setVimeoSource(player, isPreview) {
+    const videoId = player.dataset[videoMobileViewport.matches ? 'vimeoMobile' : 'vimeoDesktop'];
+    const params = new URLSearchParams({
+        app_id: '122963',
+        autoplay: '1',
+        controls: isPreview ? '0' : '1',
+        dnt: '1',
+        loop: isPreview ? '1' : '0',
+        muted: isPreview ? '1' : '0',
+        playsinline: '1',
+        title: '0',
+        byline: '0',
+        portrait: '0'
+    });
+
+    if (isPreview) {
+        params.set('background', '1');
+    }
+
+    player.src = `https://player.vimeo.com/video/${videoId}?${params}`;
+}
+
+setVimeoSource(videoPreviewPlayer, true);
+videoMobileViewport.addEventListener('change', () => {
+    setVimeoSource(videoPreviewPlayer, true);
+    if (videoLightbox.classList.contains('is-open')) {
+        setVimeoSource(videoLightboxPlayer, false);
+    }
+});
 
 function openVideoLightbox() {
+    setVimeoSource(videoLightboxPlayer, false);
     videoLightbox.classList.add('is-open');
     videoLightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    videoLightboxPlayer.currentTime = 0;
-    videoLightboxPlayer.play();
 }
 
 function closeVideoLightbox() {
-    videoLightboxPlayer.pause();
+    videoLightboxPlayer.removeAttribute('src');
     videoLightbox.classList.remove('is-open');
     videoLightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
