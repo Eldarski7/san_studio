@@ -1245,11 +1245,7 @@ body {
     }
 
     .video-lightbox__stage {
-        width: min(100%, 47.8vh);
-    }
-
-    .video-lightbox__player {
-        aspect-ratio: 9 / 16;
+        width: min(100%, 90vw, 151.1vh);
     }
 }
 

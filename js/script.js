@@ -164,8 +164,9 @@ const videoLightboxPlayer = document.getElementById('videoLightboxPlayer');
 const videoLightboxClose = document.getElementById('videoLightboxClose');
 const videoMobileViewport = window.matchMedia('(max-width: 768px)');
 
-function getResponsiveVideoId(player) {
-    return player.dataset[videoMobileViewport.matches ? 'vimeoMobile' : 'vimeoDesktop'];
+function getResponsiveVideoId(player, isPreview) {
+    const useMobileVideo = isPreview && videoMobileViewport.matches;
+    return player.dataset[useMobileVideo ? 'vimeoMobile' : 'vimeoDesktop'];
 }
 
 function sendVimeoCommand(player, method) {
@@ -175,7 +176,7 @@ function sendVimeoCommand(player, method) {
 }
 
 function setVimeoSource(player, isPreview) {
-    const videoId = getResponsiveVideoId(player);
+    const videoId = getResponsiveVideoId(player, isPreview);
     const params = new URLSearchParams({
         app_id: '122963',
         autoplay: '1',
@@ -219,7 +220,7 @@ function closeVideoLightbox() {
     videoLightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
 
-    const selectedPreviewId = getResponsiveVideoId(videoPreviewPlayer);
+    const selectedPreviewId = getResponsiveVideoId(videoPreviewPlayer, true);
     if (!videoPreviewPlayer.src.includes(`/video/${selectedPreviewId}?`)) {
         setVimeoSource(videoPreviewPlayer, true);
     } else {
