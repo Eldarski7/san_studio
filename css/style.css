@@ -1084,15 +1084,53 @@ body {
 
 .lightbox__close {
     position: absolute;
-    top: 24px;
-    right: 24px;
-    background: none;
-    border: none;
+    inset-block-start: clamp(12px, 1.6vw, 20px);
+    inset-inline-end: clamp(12px, 1.6vw, 20px);
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
     color: var(--color-primary);
-    font-size: 29px;
-    line-height: 1;
+    font-size: 0;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox__close::before,
+.lightbox__close::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 1.5px;
+    border-radius: 1px;
+    background-color: currentColor;
+}
+
+.lightbox__close::before {
+    transform: rotate(45deg);
+}
+
+.lightbox__close::after {
+    transform: rotate(-45deg);
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.lightbox__close:active {
+    transform: scale(0.94);
+}
+
+.lightbox__close:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
 }
 
 .lightbox__nav {
@@ -1142,26 +1180,31 @@ body {
 
 .video-lightbox__close {
     position: absolute;
-    top: 24px;
-    right: 24px;
-    z-index: 1;
+    inset-block-start: clamp(12px, 1.6vw, 20px);
+    inset-inline-end: clamp(12px, 1.6vw, 20px);
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
     border: 0;
-    background: none;
+    border-radius: 50%;
+    background: transparent;
     color: var(--color-primary);
-    font-size: 29px;
-    line-height: 1;
+    font-size: 0;
     cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.video-lightbox__close:hover,
+.video-lightbox__close:focus-visible {
+    background-color: rgba(255, 255, 255, 0.16);
 }
 
 @media (max-width: 768px) {
     .lightbox__nav {
         display: none;
-    }
-
-    .lightbox__close {
-        top: 16px;
-        right: 20px;
-        font-size: 22px;
     }
 
     .video-presentation__intro {
@@ -1199,12 +1242,6 @@ body {
     .video-presentation__play {
         opacity: 0.9;
         transform: scale(1);
-    }
-
-    .video-lightbox__close {
-        top: 16px;
-        right: 20px;
-        font-size: 22px;
     }
 
     .video-lightbox__stage {
@@ -1755,14 +1792,67 @@ body {
 
 .modal__close {
     position: absolute;
-    top: 16px;
-    right: 26px; /* было 16px — крестик прижимался к самому краю модалки */
-    background: none;
-    border: none;
-    font-size: 28px;
-    line-height: 1;
+    inset-block-start: 12px;
+    inset-inline-end: 12px;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
     color: var(--color-text-dark);
+    font-size: 0;
     cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal__close::before,
+.modal__close::after,
+.quiz-modal__close::before,
+.quiz-modal__close::after,
+.video-lightbox__close::before,
+.video-lightbox__close::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 1.5px;
+    border-radius: 1px;
+    background-color: currentColor;
+}
+
+.modal__close::before,
+.quiz-modal__close::before,
+.video-lightbox__close::before {
+    transform: rotate(45deg);
+}
+
+.modal__close::after,
+.quiz-modal__close::after,
+.video-lightbox__close::after {
+    transform: rotate(-45deg);
+}
+
+.modal__close:hover,
+.modal__close:focus-visible,
+.quiz-modal__close:hover,
+.quiz-modal__close:focus-visible {
+    background-color: rgba(26, 26, 26, 0.08);
+}
+
+.modal__close:active,
+.quiz-modal__close:active,
+.video-lightbox__close:active {
+    transform: scale(0.94);
+}
+
+.modal__close:focus-visible,
+.quiz-modal__close:focus-visible,
+.video-lightbox__close:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
 }
 
 .modal__form {
@@ -1936,12 +2026,22 @@ body {
 
 .quiz-modal__close {
     position: absolute;
-    top: 16px; right: 26px; /* было 16px — крестик прижимался к самому краю модалки */
-    background: none; border: none;
-    font-size: 28px; color: var(--color-text-dark);
+    inset-block-start: 12px;
+    inset-inline-end: 12px;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text-dark);
+    font-size: 0;
     cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.quiz-modal__close:hover { opacity: 0.7; }
 
 .quiz-modal__subtitle {
     font-family: var(--font-inter);
