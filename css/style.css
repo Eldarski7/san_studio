@@ -1179,6 +1179,15 @@ body {
         aspect-ratio: 4 / 5;
     }
 
+    .video-presentation__video {
+        transform: scale(1.42);
+    }
+
+    .video-presentation__preview:hover .video-presentation__video,
+    .video-presentation__preview:focus-visible .video-presentation__video {
+        transform: scale(1.45);
+    }
+
     .video-presentation__play {
         opacity: 0.9;
         transform: scale(1);
