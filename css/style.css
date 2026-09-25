@@ -420,7 +420,7 @@ body {
 .video-presentation__preview {
     position: relative;
     display: block;
-    width: min(100%, 1200px);
+    width: 100%;
     aspect-ratio: 16 / 9;
     margin-inline: auto;
     overflow: hidden;
