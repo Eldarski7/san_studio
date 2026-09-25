@@ -420,8 +420,9 @@ body {
 .video-presentation__preview {
     position: relative;
     display: block;
-    width: 100%;
-    aspect-ratio: 16 / 8;
+    width: min(100%, 1200px);
+    aspect-ratio: 16 / 9;
+    margin-inline: auto;
     overflow: hidden;
     padding: 0;
     border: 0;
@@ -1176,16 +1177,8 @@ body {
     }
 
     .video-presentation__preview {
-        aspect-ratio: 4 / 5;
-    }
-
-    .video-presentation__video {
-        transform: scale(1.42);
-    }
-
-    .video-presentation__preview:hover .video-presentation__video,
-    .video-presentation__preview:focus-visible .video-presentation__video {
-        transform: scale(1.45);
+        width: min(100%, 42vh);
+        aspect-ratio: 9 / 16;
     }
 
     .video-presentation__play {
