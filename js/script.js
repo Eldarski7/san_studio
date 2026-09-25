@@ -164,8 +164,18 @@ const videoLightboxPlayer = document.getElementById('videoLightboxPlayer');
 const videoLightboxClose = document.getElementById('videoLightboxClose');
 const videoMobileViewport = window.matchMedia('(max-width: 768px)');
 
+function getResponsiveVideoId(player) {
+    return player.dataset[videoMobileViewport.matches ? 'vimeoMobile' : 'vimeoDesktop'];
+}
+
+function sendVimeoCommand(player, method) {
+    if (player.contentWindow && player.src) {
+        player.contentWindow.postMessage(JSON.stringify({ method }), 'https://player.vimeo.com');
+    }
+}
+
 function setVimeoSource(player, isPreview) {
-    const videoId = player.dataset[videoMobileViewport.matches ? 'vimeoMobile' : 'vimeoDesktop'];
+    const videoId = getResponsiveVideoId(player);
     const params = new URLSearchParams({
         app_id: '122963',
         autoplay: '1',
@@ -188,13 +198,15 @@ function setVimeoSource(player, isPreview) {
 
 setVimeoSource(videoPreviewPlayer, true);
 videoMobileViewport.addEventListener('change', () => {
-    setVimeoSource(videoPreviewPlayer, true);
     if (videoLightbox.classList.contains('is-open')) {
         setVimeoSource(videoLightboxPlayer, false);
+    } else {
+        setVimeoSource(videoPreviewPlayer, true);
     }
 });
 
 function openVideoLightbox() {
+    sendVimeoCommand(videoPreviewPlayer, 'pause');
     setVimeoSource(videoLightboxPlayer, false);
     videoLightbox.classList.add('is-open');
     videoLightbox.setAttribute('aria-hidden', 'false');
@@ -206,6 +218,13 @@ function closeVideoLightbox() {
     videoLightbox.classList.remove('is-open');
     videoLightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+
+    const selectedPreviewId = getResponsiveVideoId(videoPreviewPlayer);
+    if (!videoPreviewPlayer.src.includes(`/video/${selectedPreviewId}?`)) {
+        setVimeoSource(videoPreviewPlayer, true);
+    } else {
+        sendVimeoCommand(videoPreviewPlayer, 'play');
+    }
 }
 
 videoPreview.addEventListener('click', openVideoLightbox);

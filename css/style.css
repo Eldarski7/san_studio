@@ -1119,7 +1119,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: clamp(18px, 4vw, 48px);
-    background-color: rgba(0, 0, 0, 0.94);
+    background-color: rgba(0, 0, 0, 0.92);
 }
 
 .video-lightbox.is-open {
