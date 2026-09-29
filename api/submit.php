@@ -42,9 +42,32 @@ $labels = [
     'package' => 'Заказ пакета',
     'quiz' => 'Квиз: расчёт стоимости'
 ];
-$leadType = $labels[$formType] ?? 'Заявка с сайта';
+$leadType = $labels[$formType] ?? '';
+if ($leadType === '') {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'message' => 'Неизвестный тип формы']);
+    exit;
+}
+
+$package = trim((string) ($_POST['package'] ?? ''));
+if ($formType === 'package' && !in_array($package, ['START', 'REGULAR', 'COMFORT', 'BUSINESS'], true)) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'message' => 'Не выбран пакет услуг']);
+    exit;
+}
+
+$fieldLabels = [
+    'objectType' => 'Тип объекта',
+    'object_type' => 'Тип объекта',
+    'area' => 'Площадь',
+    'style' => 'Предпочитаемый стиль',
+    'goal' => 'Что хочет получить клиент',
+    'participation' => 'Готовность участвовать в реализации',
+    'timeline' => 'Планируемый срок проекта',
+    'package' => 'Выбранный пакет услуг'
+];
 $lines = [
-    'Тип заявки: ' . $leadType,
+    'Источник: форма «' . $leadType . '»',
     'Имя: ' . $name,
     'Телефон: ' . $phone,
     'Дата: ' . date('Y-m-d H:i:s')
@@ -58,12 +81,17 @@ foreach ($_POST as $key => $value) {
 
     $value = trim((string) $value);
     if ($value !== '') {
-        $lines[] = $key . ': ' . preg_replace('/[\r\n]+/', ' ', $value);
+        $value = function_exists('mb_substr') ? mb_substr($value, 0, 1000, 'UTF-8') : substr($value, 0, 1000);
+        $question = $fieldLabels[$key] ?? ucfirst(str_replace('_', ' ', $key));
+        $lines[] = $question . ': ' . preg_replace('/[\r\n]+/', ' ', $value);
     }
 }
 
 $recipient = 'info@sanstudio.kz';
-$subject = 'Новая заявка SAN STUDIO: ' . $leadType;
+$subject = 'SAN STUDIO — ' . $leadType;
+if ($formType === 'package') {
+    $subject .= ': ' . $package;
+}
 $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 $headers = [
     'From: info@sanstudio.kz',
